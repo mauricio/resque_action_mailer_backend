@@ -36,14 +36,20 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "lib/headbanger/resque_mailer.rb",
+     "lib/init.rb",
      "lib/resque_action_mailer_backend.rb",
+     "resque_action_mailer_backend.gemspec",
      "spec/resque_action_mailer_backend_spec.rb",
      "spec/spec.opts",
-     "spec/spec_helper.rb"
+     "spec/spec_helper.rb",
+     "spec/test_mailer.rb",
+     "spec/test_mailer/test.erb"
   ]
   s.homepage = %q{http://github.com/mauricio/resque_action_mailer_backend}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
+  s.rubyforge_project = %q{resque_action_mailer_backend}
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Use Resque to enqueue and send your emails}
   s.test_files = [

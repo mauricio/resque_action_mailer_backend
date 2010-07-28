@@ -23,6 +23,7 @@ begin
     gem.email = "mauricio.linhares@gmail.com"
     gem.homepage = "http://github.com/mauricio/resque_action_mailer_backend"
     gem.authors = ["Maurício Linhares"]
+    gem.rubyforge_project = 'resque_action_mailer_backend'
 
     gem.add_dependency "resque", ">= 1.8.0"
     gem.add_dependency 'actionmailer', '>= 2.2.0'
