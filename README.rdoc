@@ -16,7 +16,16 @@ already using Resque for your asynchronous processing.
 And a special thanks for the ar_mailer guys for building the first email queue
 for Rails application.
 
-This project is hosted at - http://github.com/mauricio/resque_action_mailer_backend
+This project is hosted at:
+http://github.com/mauricio/resque_action_mailer_backend
+
+You can find a blog post about it here:
+http://codeshooter.wordpress.com/2010/07/28/asynchronous-email-deliveries-using-resque-and-resque_action_mailer_backend/
+
+And you can also see a sample project using it here:
+http://github.com/mauricio/resque_action_mailer_backend_example
+
+This gem was tested with Ruby 1.8.7 and Rails 2.2.
 
 == Note on Patches/Pull Requests
  
