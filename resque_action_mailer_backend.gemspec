@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{resque_action_mailer_backend}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Maur\303\255cio Linhares"]
-  s.date = %q{2010-07-28}
+  s.date = %q{2010-08-19}
   s.description = %q{
       With this gem you will be able to enqueue your emails
       on your Resque workers to avoid making your user wait for the email to be
