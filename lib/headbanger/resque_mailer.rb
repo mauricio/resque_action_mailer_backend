@@ -21,7 +21,7 @@ class Headbanger::ResqueMailer
         Headbanger::ResqueMailer,
         :destinations => mail.destinations,
         :mail => mail.encoded,
-        :from => mail.from.first )
+        :from => mail.from )
     end
 
     def perform( options )
@@ -37,12 +37,13 @@ class Headbanger::ResqueMailer
   def deliver
     smtp = Net::SMTP.new(smtp_settings[:address], smtp_settings[:port])
     smtp.enable_starttls_auto if smtp_settings[:enable_starttls_auto] && smtp.respond_to?(:enable_starttls_auto)
+    from = (@options[:from] && @options[:from].first) || smtp_settings[:user_name]
     smtp.start(
       smtp_settings[:domain],
       smtp_settings[:user_name],
       smtp_settings[:password],
       smtp_settings[:authentication]) do |smtp|
-        smtp.sendmail(@options[:mail], @options[:sender], @options[:destinations])
+        smtp.sendmail(@options[:mail], from, @options[:destinations])
     end
   end
 
