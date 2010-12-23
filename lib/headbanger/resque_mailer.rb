@@ -16,10 +16,11 @@ class Headbanger::ResqueMailer
     end
 
     def deliver( mail )
+      destinations = mail.destinations
       mail.ready_to_send
-      Resque.enqueue( 
+      Resque.enqueue(
         Headbanger::ResqueMailer,
-        :destinations => mail.destinations,
+        :destinations => destinations,
         :mail => mail.encoded,
         :from => mail.from )
     end
