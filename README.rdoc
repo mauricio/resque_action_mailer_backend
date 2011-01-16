@@ -41,3 +41,7 @@ This gem was tested with Ruby 1.8.7 and Rails 2.2.
 == Copyright
 
 Copyright (c) 2010 Maurício Linhares. See LICENSE for details.
+
+== Contributors
+
+* Fábio Yamate - @fabioyamate
